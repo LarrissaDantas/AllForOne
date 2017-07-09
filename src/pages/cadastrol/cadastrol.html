@@ -11,13 +11,13 @@
 <ion-content padding class="conteudol">
   <div class="namel">
   <ion-item>
-    <ion-input type="text" placeholder="Name:" [(ngModel)]="name"></ion-input>
+    <ion-input type="text" placeholder="Name:" [(ngModel)]="novoLugar.name"></ion-input>
 </ion-item>
 </div>
 <div class="categorial">
   <ion-item>
   <ion-label>Categoria</ion-label>
-  <ion-select [(ngModel)]="Categoria">
+  <ion-select [(ngModel)]="novoLugar.category">
     <ion-option value="a">Bar	</ion-option>
     <ion-option value="b">Cinema</ion-option>
     <ion-option value="c">Rua	</ion-option>
@@ -42,13 +42,13 @@
 </div>
 <div class="enderecol">
 <ion-item>
-  <ion-input type="text" placeholder="Endereço:" [(ngModel)]="endereco"></ion-input>
+  <ion-input type="text" placeholder="Endereço:" [(ngModel)]="novoLugar.endereco"></ion-input>
 </ion-item>
 </div>
 <div class="phonel">
 <ion-item>
-  <ion-input type="text" placeholder="Phone:" [(ngModel)]="phone"></ion-input>
+  <ion-input type="text" placeholder="Phone:" [(ngModel)]="novoLugar.phone"></ion-input>
 </ion-item>
 </div>
-<button  ion-button block outline color="light"  >Enviar</button>
+<button  ion-button block outline color="light" (click)="addPlace()">Save</button>
 </ion-content>

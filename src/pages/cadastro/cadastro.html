@@ -42,7 +42,10 @@
          </ion-item>
        </ion-list>
 
-        <button class="botao" ion-button block outline color="light"  (click)="signup()" >Sign up <ion-spinner [color]="white" style="margin-left: 5px"*ngIf="loading"></ion-spinner></button>
+        <button class="botao" ion-button block outline color="light"  (click)="signup()" >
+          <span class="text" *ngIf="!loading">Sign up</span>
+          <ion-spinner *ngIf="loading"></ion-spinner>
+        </button>
 
       </ion-list>
     </ion-card-content>

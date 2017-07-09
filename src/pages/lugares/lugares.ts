@@ -1,5 +1,6 @@
+import {DatabaseProvider} from '../../providers/database/database';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {ModalController, NavController} from 'ionic-angular';
 import { CadastrolPage } from '../cadastrol/cadastrol';
 import { FiltrolPage } from '../filtrol/filtrol';
 
@@ -10,14 +11,22 @@ import { FiltrolPage } from '../filtrol/filtrol';
 })
 export class LugaresPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              public modalCtrl: ModalController,
+              public databaseProvider: DatabaseProvider) {
 
   }
 
   cadastrol(){
-      this.navCtrl.push(CadastrolPage);
+    let modal = this.modalCtrl.create(CadastrolPage);
+    modal.present();
   }
+
   filtrol(){
-      this.navCtrl.push(FiltrolPage);
+    this.navCtrl.push(FiltrolPage);
+  }
+
+  get places() {
+    return this.databaseProvider.places;
   }
 }

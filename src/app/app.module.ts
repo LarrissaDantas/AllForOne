@@ -24,6 +24,7 @@ import {FiltrolPage} from '../pages/filtrol/filtrol';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 import { DatabaseProvider } from '../providers/database/database';
 
+import { ValuesPipe } from '../pipes/values';
 @NgModule({
   declarations: [
     MyApp,
@@ -39,7 +40,8 @@ import { DatabaseProvider } from '../providers/database/database';
     CadastromPage,
     CadastrolPage,
     FiltromPage,
-    FiltrolPage
+    FiltrolPage,
+    ValuesPipe
   ],
 
   imports: [

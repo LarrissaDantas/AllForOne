@@ -11,13 +11,13 @@
 <ion-content padding class="conteudo">
   <div class="namem">
   <ion-item>
-    <ion-input type="text" placeholder="Name:" [(ngModel)]="name"></ion-input>
+    <ion-input type="text" placeholder="Name:" [(ngModel)]="novo.name"></ion-input>
 </ion-item>
 </div>
 <div class="categoriam">
   <ion-item>
   <ion-label>Categoria</ion-label>
-  <ion-select [(ngModel)]="Categoria">
+  <ion-select [(ngModel)]="novo.categoria">
     <ion-option value="a">Acupuntura	</ion-option>
     <ion-option value="b">Alergia</ion-option>
     <ion-option value="c">Angiologia	</ion-option>
@@ -54,13 +54,13 @@
 </div>
 <div class="endereco">
 <ion-item>
-  <ion-input type="text" placeholder="Endereço:" [(ngModel)]="endereco"></ion-input>
+  <ion-input type="text" placeholder="Endereço:" [(ngModel)]="novo.address"></ion-input>
 </ion-item>
 </div>
 <div class="phone">
 <ion-item>
-  <ion-input type="text" placeholder="Phone:" [(ngModel)]="phone"></ion-input>
+  <ion-input type="text" placeholder="Phone:" [(ngModel)]="novo.phone"></ion-input>
 </ion-item>
 </div>
-  <button  ion-button block outline color="light"  >Enviar</button>
+  <button  ion-button block outline color="light" (click)="addProfessional()" >Save</button>
 </ion-content>
