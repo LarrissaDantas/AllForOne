@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import {ModalController, NavController} from 'ionic-angular';
 import { CadastrolPage } from '../cadastrol/cadastrol';
 import { FiltrolPage } from '../filtrol/filtrol';
-
+import {PerfillugarPage} from '../perfillugar/perfillugar';
 
 @Component({
   selector: 'page-lugares',
@@ -18,12 +18,14 @@ export class LugaresPage {
   }
 
   cadastrol(){
-    let modal = this.modalCtrl.create(CadastrolPage);
-    modal.present();
+      this.navCtrl.push(CadastrolPage);
   }
 
   filtrol(){
     this.navCtrl.push(FiltrolPage);
+  }
+   perfillugar(){
+      this.navCtrl.push(PerfillugarPage);
   }
 
   get places() {

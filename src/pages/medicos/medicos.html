@@ -18,13 +18,30 @@
     </ion-buttons>
     </ion-toolbar>
 </ion-header>
-<ion-content padding >
-  <ion-list>
-    <ion-item *ngFor="let professional of professionals | async | values">
-      {{ professional.name }}<br>
-      {{ professional.category }}<br>
-      {{ professional.address }}<br>
-      {{ professional.phone }}
-    </ion-item>
-  </ion-list>
+<ion-content padding class="colormed" >
+   <ion-list *ngFor="let professional of professionals | async | values" >
+    
+     <ion-item class="corcard" >
+       
+         <ion-avatar item-start>
+          <img  src="../assets/saude.jpg" />  
+         </ion-avatar>
+       
+           {{ professional.name }}<br>
+          {{ professional.categoria }}<br>
+         
+            <p color="light">
+             {{ professional.address }}<br>
+            {{ professional.phone }}
+             </p>
+   <button  ion-button block clear color= "light" (click)="openPage(professional)"  >
+     Rate
+   </button>
+     </ion-item>
+  </ion-list>    
 </ion-content>
+
+
+
+
+

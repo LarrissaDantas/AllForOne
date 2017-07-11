@@ -1,8 +1,9 @@
 import {DatabaseProvider} from '../../providers/database/database';
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { CadastromPage } from '../cadastrom/cadastrom';
 import { FiltromPage } from '../filtrom/filtrom';
+import {PerfilsaudePage} from '../perfilsaude/perfilsaude';
 
 
 @Component({
@@ -12,18 +13,20 @@ import { FiltromPage } from '../filtrom/filtrom';
 export class MedicosPage {
 
   constructor(public navCtrl: NavController,
-              public databaseProvider: DatabaseProvider,
-              private modalCtrl: ModalController) {
+              public databaseProvider: DatabaseProvider) {
 
   }
 
   cadastrom(){
-      let modal = this.modalCtrl.create(CadastromPage);
-      modal.present();
+      this.navCtrl.push(CadastromPage);
   }
   filtrom(){
       this.navCtrl.push(FiltromPage);
   }
+  openPage(professional){
+      this.navCtrl.push(PerfilsaudePage, { professional: professional });
+  }
+
 
   get professionals() {
     return this.databaseProvider.professionals;

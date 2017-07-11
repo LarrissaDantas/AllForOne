@@ -3,28 +3,37 @@
     <ion-title>
       Places
     </ion-title>
-      <button ion-button  menuToggle color="light">
+    <button ion-button  menuToggle color="light">
         <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-buttons end>
+    </button>
+    <ion-buttons end>
       <button ion-button icon-only (click)="cadastrol()">
         <ion-icon name="add"></ion-icon>
-      </button>
+    </button>
     </ion-buttons>
     <ion-buttons end>
-    <button ion-button icon-only (click)="filtrol()">
+      <button ion-button icon-only (click)="filtrol()">
       <ion-icon name="ios-funnel" class="funilm"></ion-icon>
     </button>
   </ion-buttons>
     </ion-toolbar>
 </ion-header>
-<ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let place of places | async | values">
-      {{ place.name }}<br>
-      {{ place.category }}<br>
+<ion-content padding class="colorlug">
+  <ion-list *ngFor="let place of places | async | values">
+    <ion-card class="titulo">
+      <ion-card-content>
+        <ion-card-title class="title1">
+          {{ place.name }}<br>
+          {{ place.category }}<br>
+        </ion-card-title>
+        <p>
       {{ place.address }}<br>
       {{ place.phone }}
-    </ion-item>
+        </p>
+    <button  ion-button block clear color="Light" (click)="perfillugar()" >
+     Rate
+   </button>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
 </ion-content>

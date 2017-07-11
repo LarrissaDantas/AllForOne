@@ -1,23 +1,26 @@
 
 .imagemenu{
-  background: url('../assets/fundomenu.png');
+  background-image: url('../assets/fundomenu.png');
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .medico1{
-  width: 136px;
-  height: 136px;
-  top: 130px;
-  left: 30px;
+  width: 40%;
+  height: 30%;
+  top: 10%;
+  left: 5%;
+  margin-top: 10%;
 
-  margin-bottom: 30px;
+
 }
 .lugares2{
-  width: 136px;
-  height: 136px;
-  top: 130px;
-  left: 65px;
+  width: 40%;
+  height: 30%;
+  top: 10%;
+  left: 13%;
 
-  margin-bottom: 30px;
+  
 }
 .menulogo{
 

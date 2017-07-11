@@ -17,6 +17,9 @@ import {CadastromPage} from '../pages/cadastrom/cadastrom';
 import {CadastrolPage} from '../pages/cadastrol/cadastrol';
 import {FiltromPage} from '../pages/filtrom/filtrom';
 import {FiltrolPage} from '../pages/filtrol/filtrol';
+import {PerfilsaudePage} from '../pages/perfilsaude/perfilsaude';
+import {PerfillugarPage} from '../pages/perfillugar/perfillugar';
+
 
 import { App } from 'ionic-angular';
 import firebase from 'firebase';
