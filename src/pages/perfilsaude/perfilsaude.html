@@ -4,5 +4,16 @@
   </ion-navbar>
 
 {{ professional.name }}
+{{ getAverageRate() }}
 
+  <button  ion-button block clear (click)="rate()"  >
+     Rate
+  </button>
+
+  <ion-list>
+    <ion-item *ngFor="let rating of professional.ratings | values">
+      Rate: {{ rating.rate }} <br>
+      Comment: {{ rating.comment }}
+    </ion-item>
+  </ion-list>
 </ion-content>

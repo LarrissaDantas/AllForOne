@@ -6,6 +6,7 @@ import { User } from "../../models/user";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Place } from '../../models/place';
 import { HealthProfessional } from '../../models/health-professional';
+import { Rate } from "../../models/rate";
 /*
   Generated class for the DatabaseProvider provider.
 
@@ -21,17 +22,54 @@ export class DatabaseProvider {
     this.places = new BehaviorSubject([]);
     this.professionals = new BehaviorSubject([]);
 
-    firebase.database().ref('places').on('value', snapshot => {
-      if(snapshot.val()) {
-        this.places.next(snapshot.val());
-      }
+    firebase.auth().onAuthStateChanged(user => {
+      if(user) {
+        this.listen();
+      } 
+    });
+  }
+
+  listen() {
+    firebase.database().ref('places').on('child_added', snapshot => {
+      this.parseAndSavePlace(snapshot);
     });
 
-    firebase.database().ref('health_professionals').on('value', snapshot => {
-      if(snapshot.val()) {
-        this.professionals.next(snapshot.val());
-      }
+    firebase.database().ref('health_professionals').on('child_added', snapshot => {
+      this.parseAndSaveHealthProfessional(snapshot);
     });
+
+  }
+
+  parseAndSaveHealthProfessional(snapshot) {
+    if(snapshot.val()) {
+      let professional = this.parseSnapshot(snapshot, new HealthProfessional());
+
+      let professionals = this.professionals.getValue();
+      professionals.push(professional);
+    
+      this.professionals.next(professionals);
+    }
+  }
+
+  parseAndSavePlace(snapshot) {
+    if(snapshot.val()) {
+      let place = this.parseSnapshot(snapshot, new Place());
+
+      let places = this.places.getValue();
+      places.push(place);
+    
+      this.places.next(places);
+    }
+  }
+
+  parseSnapshot(snapshot, returnObj) {
+    for(let key in snapshot.val()) {
+      returnObj[key] = snapshot.val()[key];
+    }
+
+    returnObj.id = snapshot.key;
+
+    return returnObj;
   }
 
   addPlace(place: Place) {
@@ -40,6 +78,14 @@ export class DatabaseProvider {
 
   addProfessional(professional: HealthProfessional) {
     return firebase.database().ref('health_professionals').push().set(professional);
+  }
+
+  rateProfessional(professional: HealthProfessional, rate: Rate) {
+    return firebase.database().ref('health_professionals').child(professional.id).child('ratings').push().set(rate);
+  }
+
+  ratePlace(place: Place, rate: Rate) {
+    return firebase.database().ref('health_professionals').child(place.id).child('ratings').push().set(rate);
   }
 
   saveUserInfo(user: User) {
