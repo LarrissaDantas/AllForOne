@@ -9,7 +9,10 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="filtram" >
+<<<<<<< HEAD
 
+  <div class="categoriasm">
+=======
   <div class="categoriasm">
     <ion-item>
     <ion-label>Category</ion-label>
@@ -18,7 +21,73 @@
     </ion-select>
   </ion-item>
   </div>
+  <!--<div class="estadom">
+    <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select [(ngModel)]="estado">
+      <ion-option value="a">Bar	</ion-option>
+      <ion-option value="b">Cinema</ion-option>
+      <ion-option value="c">Rua	</ion-option>
+      <ion-option value="d">Bairro	</ion-option>
+      <ion-option value="e">Cidade	</ion-option>
+      <ion-option value="f"> Estado</ion-option>
+      <ion-option value="g">País	</ion-option>
+      <ion-option value="h"> Teatro	 	</ion-option>
+      <ion-option value="i">Parque	</ion-option>
+      <ion-option value="j">Academia	 </ion-option>
+      <ion-option value="l">Restaurante</ion-option>
+      <ion-option value="m">Praça	</ion-option>
+      <ion-option value="n">Salão de Beleza</ion-option>
+      <ion-option value="o">  Casa de show	</ion-option>
+      <ion-option value="p">Universidade 	</ion-option>
+      <ion-option value="q"> Escola	 	</ion-option>
+      <ion-option value="r"> Shopping</ion-option>
+      <ion-option value="s">Loja</ion-option>
+      <ion-option value="t">Livraria</ion-option>
+    </ion-select>
+  </ion-item>
+  </div>
+  <div class="cidadem">
+    <ion-item>
+    <ion-label>Cidade</ion-label>
+    <ion-select [(ngModel)]="cidade">
+      <ion-option value="a">Bar	</ion-option>
+      <ion-option value="b">Cinema</ion-option>
+      <ion-option value="c">Rua	</ion-option>
+      <ion-option value="d">Bairro	</ion-option>
+      <ion-option value="e">Cidade	</ion-option>
+      <ion-option value="f"> Estado</ion-option>
+      <ion-option value="g">País	</ion-option>
+      <ion-option value="h"> Teatro	 	</ion-option>
+      <ion-option value="i">Parque	</ion-option>
+      <ion-option value="j">Academia	 </ion-option>
+      <ion-option value="l">Restaurante</ion-option>
+      <ion-option value="m">Praça	</ion-option>
+      <ion-option value="n">Salão de Beleza</ion-option>
+      <ion-option value="o">  Casa de show	</ion-option>
+      <ion-option value="p">Universidade 	</ion-option>
+      <ion-option value="q"> Escola	 	</ion-option>
+      <ion-option value="r"> Shopping</ion-option>
+      <ion-option value="s">Loja</ion-option>
+      <ion-option value="t">Livraria</ion-option>
+    </ion-select>
+  </ion-item>
+  </div>
+  <div class="categorias">
+>>>>>>> ef68664927552ae3adba4232811770b9e9178236
+    <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select [(ngModel)]="category">
+      <ion-option *ngFor="let category of categories" [value]="category">{{ category }}</ion-option>
+    </ion-select>
+  </ion-item>
+<<<<<<< HEAD
+  </div>
   
   <button  ion-button block outline color="light" (click)="choose(category)">Filter</button>
   <button  ion-button block outline color="light" (click)="medicos()">Return</button>
+=======
+  </div>-->
+  <button  ion-button block outline color="light" (click)="choose(category)">Filter</button>
+>>>>>>> ef68664927552ae3adba4232811770b9e9178236
 </ion-content>

@@ -16,7 +16,6 @@ export class PerfillugarPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private databaseProvider: DatabaseProvider,
   public ngZone: NgZone) {
     this.place = this.navParams.get('place');
-    console.log(this.place);
   }
 
   rate() {
