@@ -1,6 +1,6 @@
 import {DatabaseProvider} from '../../providers/database/database';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {ModalController, NavController} from 'ionic-angular';
 import { CadastromPage } from '../cadastrom/cadastrom';
 import { FiltromPage } from '../filtrom/filtrom';
 import {PerfilsaudePage} from '../perfilsaude/perfilsaude';
@@ -11,17 +11,24 @@ import {PerfilsaudePage} from '../perfilsaude/perfilsaude';
   templateUrl: 'medicos.html'
 })
 export class MedicosPage {
+  currentCategory: string;
 
   constructor(public navCtrl: NavController,
-              public databaseProvider: DatabaseProvider) {
+              public databaseProvider: DatabaseProvider,
+              public modalCtrl: ModalController) {
 
   }
 
   cadastrom(){
       this.navCtrl.push(CadastromPage);
   }
+
   filtrom(){
-      this.navCtrl.push(FiltromPage);
+      let modal = this.modalCtrl.create(FiltromPage);
+      modal.onDidDismiss(category => {
+        this.currentCategory = category;
+      });
+      modal.present();
   }
   openPage(professional){
       this.navCtrl.push(PerfilsaudePage, { professional: professional });

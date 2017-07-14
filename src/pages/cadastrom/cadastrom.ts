@@ -2,7 +2,7 @@ import {DatabaseProvider} from '../../providers/database/database';
 import { Component } from '@angular/core';
 import {ViewController, NavController,  NavParams} from 'ionic-angular';
 import { HealthProfessional } from '../../models/health-professional';
-
+import { MedicosPage } from '../medicos/medicos';
 @Component({
   selector: 'page-cadastrom',
   templateUrl: 'cadastrom.html'
@@ -27,7 +27,9 @@ export class CadastromPage {
     });
   }
 
-
+medicos(){
+      this.navCtrl.push(MedicosPage);
+  }
 
 
 }

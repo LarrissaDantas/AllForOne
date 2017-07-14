@@ -40,6 +40,18 @@ export class DatabaseProvider {
 
   }
 
+  getProfessionalsCategories() {
+    return new Set(this.professionals.getValue().map(professional => {
+      return professional.category;
+    }));
+  }
+
+  getPlacesCategories() {
+    return new Set(this.places.getValue().map(place => {
+      return place.category;
+    }));
+  }
+
   parseAndSaveHealthProfessional(snapshot) {
     if(snapshot.val()) {
       let professional = this.parseSnapshot(snapshot, new HealthProfessional());
@@ -81,11 +93,15 @@ export class DatabaseProvider {
   }
 
   rateProfessional(professional: HealthProfessional, rate: Rate) {
-    return firebase.database().ref('health_professionals').child(professional.id).child('ratings').push().set(rate);
+    let ref = firebase.database().ref('health_professionals').child(professional.id).child('ratings');
+    rate.id = ref.push().key;
+    return ref.child(rate.id).set(rate);
   }
 
   ratePlace(place: Place, rate: Rate) {
-    return firebase.database().ref('health_professionals').child(place.id).child('ratings').push().set(rate);
+    let ref = firebase.database().ref('places').child(place.id).child('ratings');
+    rate.id = ref.push().key;
+    return ref.child(rate.id).set(rate);
   }
 
   saveUserInfo(user: User) {
@@ -96,3 +112,4 @@ export class DatabaseProvider {
   }
 
 }
+

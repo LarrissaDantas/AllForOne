@@ -49,7 +49,7 @@ export class PerfilsaudePage {
 
             this.databaseProvider.rateProfessional(this.professional, rate).then(() => {
               this.ngZone.run(() => {
-                 this.professional.ratings['new'] = rate;
+                 this.professional.ratings[rate.id] = rate;
               });
             });
           }

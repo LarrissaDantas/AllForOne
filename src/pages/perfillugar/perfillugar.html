@@ -7,9 +7,9 @@
   </ion-navbar>
   <img  src="../assets/perfillugar.jpg" /> 
 
-<h1 class="nameh">
+<h2 class="nameh">
 {{ place.name }}<br>
-</h1>
+</h2>
 <h2 class="categoriah" >{{ place.categoria }}<br></h2>
 <span class="phoneh">
 {{ place.category }}<br>
@@ -22,24 +22,13 @@
       <ion-icon name="star"></ion-icon>
      Rate
   </button>
-  <button ion-button icon-left  outline color="light">
-  <ion-icon name="md-trophy"></ion-icon>
-  Top
-</button>
 
-
-  <button ion-button icon-left outline color="light">
-  <ion-icon name="md-megaphone"></ion-icon>
-  Report
-</button>
-
-  
 </div>
   
 
   <ion-list padding >
     <ion-item class="lista"outline color="dark" *ngFor="let rating of place.ratings | values">
-      Rate: {{ rating.rate }} <br>
+     <label class="paragrafolugar"> Rate: {{ rating.rate }} <br></label>
       Comment: {{ rating.comment }}
     </ion-item>
   </ion-list>

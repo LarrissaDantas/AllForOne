@@ -1,7 +1,7 @@
 <ion-header >
   <ion-toolbar color="medico">
     <ion-title>
-      Health
+      Health Professionals
     </ion-title>
       <button ion-button  menuToggle color="light">
         <ion-icon name="menu"></ion-icon>
@@ -19,7 +19,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="colormed" >
-   <ion-list *ngFor="let professional of professionals | async | values" >
+   <ion-list *ngFor="let professional of professionals | async | values | category:currentCategory" >
     
      <ion-item class="corcard" >
        
@@ -44,8 +44,5 @@
      </ion-item>
   </ion-list>    
 </ion-content>
-
-
-
 
 

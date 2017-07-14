@@ -21,24 +21,14 @@
       <ion-icon name="star"></ion-icon>
      Rate
   </button>
-  <button ion-button icon-left  outline color="light">
-  <ion-icon name="md-trophy"></ion-icon>
-  Top
-</button>
-
-
-  <button ion-button icon-left outline color="light">
-  <ion-icon name="md-megaphone"></ion-icon>
-  Report
-</button>
-
+  
   
 </div>
   
 
   <ion-list padding >
     <ion-item class="lista"outline color="dark" *ngFor="let rating of professional.ratings | values">
-      <span class="paragrafo2">  Rate: {{ rating.rate }} <br></span>
+      <label class="yelow">  Rate: {{ rating.rate }} <br></label>
       Comment: {{ rating.comment }}
     </ion-item>
   </ion-list>

@@ -41,8 +41,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: MenuPage, icon:'home' },
       { title: 'About', component: SobrePage, icon:'ios-flower-outline' },
-      { title: 'Top', component: MelhoresPage, icon: 'md-trophy'},
-      { title: 'Reported', component:DenunciadosPage, icon: 'md-megaphone' }
+      { title: 'Health', component: MedicosPage, icon: 'md-medkit'},
+      { title: 'Place', component:LugaresPage, icon: 'md-wine' }
       
       //{ title: 'Sair', component: SairPage },
     ];

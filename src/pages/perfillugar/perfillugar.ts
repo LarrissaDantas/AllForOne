@@ -49,7 +49,7 @@ export class PerfillugarPage {
 
             this.databaseProvider.ratePlace(this.place, rate).then(() => {
               this.ngZone.run(() => {
-                 this.place.ratings['new'] = rate;
+                 this.place.ratings[rate.id] = rate;
               });
             });
           }

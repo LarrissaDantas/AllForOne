@@ -1,5 +1,7 @@
+import {DatabaseProvider} from '../../providers/database/database';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {ViewController, NavController,  NavParams} from 'ionic-angular';
+import { MedicosPage } from '../medicos/medicos';
 
 
 @Component({
@@ -7,13 +9,23 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'filtrom.html'
 })
 export class FiltromPage {
+  category: string;
+  
 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController, private databaseProvider: DatabaseProvider) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
-}
+  choose(category) {
+    this.viewCtrl.dismiss(category);
+  }
 
+  get categories() {
+    return this.databaseProvider.getProfessionalsCategories();
+  }
 
-
+medicos(){
+      this.navCtrl.push(MedicosPage);
+  }
 
 }

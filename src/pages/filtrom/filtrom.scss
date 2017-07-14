@@ -1,5 +1,11 @@
 .filtram{
-  background-color: #151415;
+   background-image: url('../assets/pfcadastro.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+   text-align: center;
+  text-transform: none;
+
 }
 .paism{
   margin-bottom: 10px;
@@ -24,4 +30,7 @@
   height: auto;
   width: auto;
   padding-top: 5px;  
+}
+.categoriasm{
+  padding-top:20%;
 }

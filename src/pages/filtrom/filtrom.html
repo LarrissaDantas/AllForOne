@@ -1,7 +1,7 @@
 <ion-header >
   <ion-toolbar color="medico">
     <ion-title>
-    Filtrar
+    Filter Health 
     </ion-title>
       <button ion-button  menuToggle color="light">
         <ion-icon name="menu"></ion-icon>
@@ -9,121 +9,16 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="filtram" >
-  <div class="paism">
-    <ion-item>
-    <ion-label>País</ion-label>
-    <ion-select [(ngModel)]="pais">
-      <ion-option value="a">Bar	</ion-option>
-      <ion-option value="b">Cinema</ion-option>
-      <ion-option value="c">Rua	</ion-option>
-      <ion-option value="d">Bairro	</ion-option>
-      <ion-option value="e">Cidade	</ion-option>
-      <ion-option value="f"> Estado</ion-option>
-      <ion-option value="g">País	</ion-option>
-      <ion-option value="h"> Teatro	 	</ion-option>
-      <ion-option value="i">Parque	</ion-option>
-      <ion-option value="j">Academia	 </ion-option>
-      <ion-option value="l">Restaurante</ion-option>
-      <ion-option value="m">Praça	</ion-option>
-      <ion-option value="n">Salão de Beleza</ion-option>
-      <ion-option value="o">  Casa de show	</ion-option>
-      <ion-option value="p">Universidade 	</ion-option>
-      <ion-option value="q"> Escola	 	</ion-option>
-      <ion-option value="r"> Shopping</ion-option>
-      <ion-option value="s">Loja</ion-option>
-      <ion-option value="t">Livraria</ion-option>
-    </ion-select>
-  </ion-item>
-  </div>
-  <div class="estadom">
-    <ion-item>
-    <ion-label>Estado</ion-label>
-    <ion-select [(ngModel)]="estado">
-      <ion-option value="a">Bar	</ion-option>
-      <ion-option value="b">Cinema</ion-option>
-      <ion-option value="c">Rua	</ion-option>
-      <ion-option value="d">Bairro	</ion-option>
-      <ion-option value="e">Cidade	</ion-option>
-      <ion-option value="f"> Estado</ion-option>
-      <ion-option value="g">País	</ion-option>
-      <ion-option value="h"> Teatro	 	</ion-option>
-      <ion-option value="i">Parque	</ion-option>
-      <ion-option value="j">Academia	 </ion-option>
-      <ion-option value="l">Restaurante</ion-option>
-      <ion-option value="m">Praça	</ion-option>
-      <ion-option value="n">Salão de Beleza</ion-option>
-      <ion-option value="o">  Casa de show	</ion-option>
-      <ion-option value="p">Universidade 	</ion-option>
-      <ion-option value="q"> Escola	 	</ion-option>
-      <ion-option value="r"> Shopping</ion-option>
-      <ion-option value="s">Loja</ion-option>
-      <ion-option value="t">Livraria</ion-option>
-    </ion-select>
-  </ion-item>
-  </div>
-  <div class="cidadem">
-    <ion-item>
-    <ion-label>Cidade</ion-label>
-    <ion-select [(ngModel)]="cidade">
-      <ion-option value="a">Bar	</ion-option>
-      <ion-option value="b">Cinema</ion-option>
-      <ion-option value="c">Rua	</ion-option>
-      <ion-option value="d">Bairro	</ion-option>
-      <ion-option value="e">Cidade	</ion-option>
-      <ion-option value="f"> Estado</ion-option>
-      <ion-option value="g">País	</ion-option>
-      <ion-option value="h"> Teatro	 	</ion-option>
-      <ion-option value="i">Parque	</ion-option>
-      <ion-option value="j">Academia	 </ion-option>
-      <ion-option value="l">Restaurante</ion-option>
-      <ion-option value="m">Praça	</ion-option>
-      <ion-option value="n">Salão de Beleza</ion-option>
-      <ion-option value="o">  Casa de show	</ion-option>
-      <ion-option value="p">Universidade 	</ion-option>
-      <ion-option value="q"> Escola	 	</ion-option>
-      <ion-option value="r"> Shopping</ion-option>
-      <ion-option value="s">Loja</ion-option>
-      <ion-option value="t">Livraria</ion-option>
-    </ion-select>
-  </ion-item>
-  </div>
-  <div class="categorias">
+
+  <div class="categoriasm">
     <ion-item>
     <ion-label>Category</ion-label>
-    <ion-select [(ngModel)]="categoria">
-      <ion-option value="Acupuncture">Acupuncture	</ion-option>
-    <ion-option value="Allergy">Allergy </ion-option>
-    <ion-option value="Angiology">Angiology	</ion-option>
-    <ion-option value="Cardiology">Cardiology	</ion-option>
-    <ion-option value="General Practitioner">General Practitioner </ion-option>
-    <ion-option value="Coloproctology ">Coloproctology </ion-option>
-    <ion-option value="Dermatology">Dermatology </ion-option>
-    <ion-option value="Endocrinology">Endocrinology </ion-option>
-    <ion-option value="Physiatry">Physiatry	</ion-option>
-    <ion-option value="Physiotherapy">Physiotherapy	 </ion-option>
-    <ion-option value="Speech therapy ">Speech therapy </ion-option>
-    <ion-option value="Gastroenterology">Gastroenterology	</ion-option>
-    <ion-option value="Geriatrics">Geriatrics </ion-option>
-    <ion-option value="Homeopathy">Homeopathy	</ion-option>
-    <ion-option value="Infectology	">Infectology	</ion-option>
-    <ion-option value="Nephrology">Nephrology </ion-option>
-    <ion-option value="Nutrition">Nutrition </ion-option>
-    <ion-option value="Nutrology">Nutrology	</ion-option>
-    <ion-option value="Dentistry">Dentistry	</ion-option>
-    <ion-option value="Ophthalmology">Ophthalmology	</ion-option>
-    <ion-option value="Oncology">Oncology </ion-option>
-    <ion-option value="Orthopedics and Traumatology">Orthopedics and Traumatology </ion-option>
-    <ion-option value="Otolaryngology">Otolaryngology </ion-option>
-    <ion-option value="Pediatrics">Pediatrics </ion-option>
-    <ion-option value="Pulmonology">Pulmonology </ion-option>
-    <ion-option value="Psychology">Psychology </ion-option>
-    <ion-option value="Psychopedagogy">Psychopedagogy	 </ion-option>
-    <ion-option value="Psychiatry">Psychiatry </ion-option>
-    <ion-option value="Rheumatology">Rheumatology	</ion-option>
-    <ion-option value="Urology">Urology </ion-option>
-    <ion-option value="Others">Others </ion-option>
+    <ion-select [(ngModel)]="category">
+      <ion-option *ngFor="let category of categories" [value]="category">{{ category }}</ion-option>
     </ion-select>
   </ion-item>
   </div>
-  <button  ion-button block outline color="light"  >Enviar</button>
+  
+  <button  ion-button block outline color="light" (click)="choose(category)">Filter</button>
+  <button  ion-button block outline color="light" (click)="medicos()">Return</button>
 </ion-content>

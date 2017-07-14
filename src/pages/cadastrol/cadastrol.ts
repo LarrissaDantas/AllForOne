@@ -2,6 +2,7 @@ import {DatabaseProvider} from '../../providers/database/database';
 import { Component } from '@angular/core';
 import {ViewController, NavController,  NavParams} from 'ionic-angular';
 import { Place } from '../../models/place';
+import { LugaresPage } from '../lugares/lugares';
 
 @Component({
   selector: 'page-cadastrol',
@@ -29,7 +30,9 @@ export class CadastrolPage {
     });
   }
 
-
+lugares(){
+      this.navCtrl.push(LugaresPage);
+  }
 
 
 }

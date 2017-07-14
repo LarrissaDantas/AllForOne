@@ -1,6 +1,14 @@
 
 
-
+.cads{
+   text-align: center;
+   color: #ffffff;
+  font-style: roboto;
+  font-size: x-large;
+  left:25%;
+  right:25%;
+  top: 15%;
+}
 .cadastro{
     margin-bottom: 5px;
     height: auto;
@@ -10,28 +18,24 @@
   }
 
   .fundo{
-    background: url('../assets/pfcadastro.jpeg');
-  }
-.logohorizontal{
-  margin-top:10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  background: url('../assets/logohorizontal.png');
-  width: 200px;
-  height: 32px;
+    
+  background-image: url('../assets/pfcadastro.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+   text-align: center;
+  text-transform: none;
 }
-.cads{
-  color: #ffffff;
-  font-style: roboto;
-  padding-top: auto;
-  margin-left: 85px;
-  margin-top: 20px;
-  font-size: x-large;
 
-}
+
+ 
+
+
+
+
 label{
   color: #ffffff;
-  margin-top: 25px;
+ 
 }
 
 .botao{
