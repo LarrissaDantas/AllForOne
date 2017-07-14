@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
+import {ViewController, NavController,  NavParams} from 'ionic-angular';
+import { DatabaseProvider } from '../../providers/database/database'
 
 @Component({
   selector: 'page-filtrol',
@@ -9,11 +9,19 @@ import { NavController, NavParams } from 'ionic-angular';
 export class FiltrolPage {
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  category: string;
+  
 
-}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController, private databaseProvider: DatabaseProvider) {
 
+  }
 
+  choose(category) {
+    this.viewCtrl.dismiss(category);
+  }
 
+  get categories() {
+    return this.databaseProvider.getPlacesCategories();
+  }
 
 }

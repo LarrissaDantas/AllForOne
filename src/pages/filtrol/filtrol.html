@@ -9,7 +9,15 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="filtrar" >
-<div class="pais">
+  <div class="categoriasl">
+   <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select [(ngModel)]="category">
+      <ion-option *ngFor="let category of categories" [value]="category">{{ category }}</ion-option>
+    </ion-select>
+  </ion-item>
+  </div>
+<!--<div class="pais">
   <ion-item>
   <ion-label>País</ion-label>
   <ion-select [(ngModel)]="pais">
@@ -114,6 +122,6 @@
     <ion-option value="t">Livraria</ion-option>
   </ion-select>
 </ion-item>
-</div>
-<button  ion-button block outline color="light"  >Enviar</button>
+</div>-->
+<button  ion-button block outline color="light"  (click)="choose(category)">Filter</button>
 </ion-content>

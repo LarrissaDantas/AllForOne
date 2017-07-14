@@ -27,6 +27,7 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
 import { DatabaseProvider } from '../providers/database/database';
 
 import { ValuesPipe } from '../pipes/values';
+import { CategoryFilterPipe } from '../pipes/category-filter';
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +46,8 @@ import { ValuesPipe } from '../pipes/values';
     FiltrolPage,
     PerfilsaudePage,
     PerfillugarPage,
-    ValuesPipe
+    ValuesPipe,
+    CategoryFilterPipe
   ],
 
   imports: [

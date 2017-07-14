@@ -19,7 +19,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="colormed" >
-   <ion-list *ngFor="let professional of professionals | async | values" >
+   <ion-list *ngFor="let professional of professionals | async | values | category:currentCategory" >
     
      <ion-item class="corcard" >
        

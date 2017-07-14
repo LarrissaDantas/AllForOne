@@ -19,7 +19,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="colorlug">
-  <ion-list *ngFor="let place of places | async | values">
+  <ion-list *ngFor="let place of places | async | values | category: category">
 
     <ion-item class="titulo">
       <ion-avatar item-start >

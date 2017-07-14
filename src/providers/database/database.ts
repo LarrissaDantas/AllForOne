@@ -40,6 +40,18 @@ export class DatabaseProvider {
 
   }
 
+  getProfessionalsCategories() {
+    return new Set(this.professionals.getValue().map(professional => {
+      return professional.category;
+    }));
+  }
+
+  getPlacesCategories() {
+    return new Set(this.places.getValue().map(place => {
+      return place.category;
+    }));
+  }
+
   parseAndSaveHealthProfessional(snapshot) {
     if(snapshot.val()) {
       let professional = this.parseSnapshot(snapshot, new HealthProfessional());

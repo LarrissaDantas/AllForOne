@@ -11,6 +11,8 @@ import {PerfillugarPage} from '../perfillugar/perfillugar';
 })
 export class LugaresPage {
 
+  category: string;
+
   constructor(public navCtrl: NavController,
               public modalCtrl: ModalController,
               public databaseProvider: DatabaseProvider) {
@@ -22,9 +24,14 @@ export class LugaresPage {
   }
 
   filtrol(){
-    this.navCtrl.push(FiltrolPage);
+    let modal = this.modalCtrl.create(FiltrolPage);
+    modal.onDidDismiss(category => {
+      this.category = category;
+    });
+    modal.present();
   }
-    openPage(place){
+  
+  openPage(place){
       this.navCtrl.push(PerfillugarPage, { place: place });
   }
 
