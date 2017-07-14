@@ -26,11 +26,13 @@ export class CadastroPage {
   //POPUP
   showAlert(){
    let alert = this.alertCtrl.create({
-     title: 'Alerta!',
-     subTitle: 'O AllForOne é um app voltado APENAS para mulheres!',
+     title: 'Alert!',
+     subTitle: 'Hello! AllForOne is an app for the purpose of uniting women for the exchange of information, service evaluations and places. Only the register of women is authorized. Thank you for your cooperation. ',
      buttons: ['OK']
    });
    alert.present();
+   
+     
   }
 
   signup(){

@@ -24,8 +24,8 @@ export class LugaresPage {
   filtrol(){
     this.navCtrl.push(FiltrolPage);
   }
-   perfillugar(){
-      this.navCtrl.push(PerfillugarPage);
+    openPage(place){
+      this.navCtrl.push(PerfillugarPage, { place: place });
   }
 
   get places() {

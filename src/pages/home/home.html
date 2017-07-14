@@ -1,5 +1,5 @@
 <ion-content class="background">
-  <div class="logo"></div>
+   <img  src="../assets/logo.png" class="logo"/>
     <ion-card-content>
       <ion-list no-line>
         <div class="loginemail">
@@ -14,11 +14,10 @@
             </ion-item>
         </div>
       </ion-list>
-
       <button class="blogin" ion-button block outline color="light" (click)="login()">Login in</button>
       <p>OR</p>
-      <button ion-button block color="facebook">
-        <ion-icon nome="logo-facebook"></ion-icon>Login with Facebook
+      <button ion-button block color="facebook" (click)="showAlert()">
+        <ion-icon nome="logo-facebook"></ion-icon>Login with Facebook 
       </button>
       <p> Forgot your login detail? <a><b>Get help signing in </b></a></p>
     </ion-card-content>

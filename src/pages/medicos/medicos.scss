@@ -1,39 +1,60 @@
 .funil{
   font-size: 10px;
 }
-.informacao{
-  left: 70%;
 
-}
 .colormed{
   background-color: #151415;
 }
 
 .item-md ion-avatar, .item-ios ion-avatar {
-  height: 100px;
-  width: 100px;
+  height: 30%;
+  width: 30%;
+  right: 10%;
+  border: 0!important;
+ 
 
   img {
     height: 100%;
     width: 100%;
     border-radius: 0!important;
+    background-size: 100%;
   }
 }
 
-
-
-.informacao{
-  background-color: transparent;
-  border: none;
-}
 .corcard{
   background-color: #363536;
   height: 100%;
+  width: 100%;
+}
 
-  
+
+.item-md ion-card-title{
+  font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    font-size: 100%;
 }
-.title{
+.item-ios ion-card-title{
+  font-weight: normal;
+  text-transform: none;
   color: #fff;
- 
+  font-size: 100%;
   
 }
+.item-md span{
+  font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    font-size: 80%;
+}
+.item-ios span {
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  font-size: 80%;
+  
+}
+.rute{
+  top: 10%;
+}
+

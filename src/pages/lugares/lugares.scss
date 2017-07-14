@@ -7,6 +7,42 @@
 .titulo{
   background-color: #363536;
 }
-.title1{
+
+.item-md ion-avatar, .item-ios ion-avatar {
+  height: 30%;
+  width: 30%;
+  right: 5%;
+  
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0!important;
+  }
+}
+.item-md ion-card-title{
+  font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    font-size: 70%;
+}
+.item-ios ion-card-title{
+  font-weight: normal;
+  text-transform: none;
   color: #fff;
+  font-size: 70%;
+  
+}
+.item-md span{
+  font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    font-size: 60%;
+}
+.item-ios span {
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  font-size: 60%;
+  
 }

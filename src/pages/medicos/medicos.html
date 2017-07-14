@@ -23,20 +23,24 @@
     
      <ion-item class="corcard" >
        
-         <ion-avatar item-start>
+         <ion-avatar item-start >
           <img  src="../assets/saude.jpg" />  
          </ion-avatar>
-       
+      
+          <ion-card-title >
            {{ professional.name }}<br>
           {{ professional.categoria }}<br>
+          </ion-card-title>
          
-            <p color="light">
+            <span class="paragrafo">
              {{ professional.address }}<br>
-            {{ professional.phone }}
-             </p>
-   <button  ion-button block clear color= "light" (click)="openPage(professional)"  >
+            {{ professional.phone }}<br>
+          
+            </span>
+   <button class="rute" ion-button block outline color= "light" (click)="openPage(professional)"  >
      Rate
    </button>
+   
      </ion-item>
   </ion-list>    
 </ion-content>

@@ -1,5 +1,5 @@
 <ion-menu [content]='menu' padding>
-  <ion-content class="img" >
+  <ion-content class="all" >
    <img src="/assets/logohorizontal.png" class="logomenu" />
     <ion-list  >
     <!-- Alteração -->
@@ -7,6 +7,9 @@
         <ion-icon item-left name="{{ p.icon }}"></ion-icon>
         {{p.title}}
       </button>
+      <button class="menulateral" color="voltar" menuClose ion-item (click)="logout()">
+        Logout
+        </button>
     </ion-list>
   </ion-content>
 </ion-menu>

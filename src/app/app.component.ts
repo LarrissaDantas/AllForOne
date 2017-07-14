@@ -23,17 +23,18 @@ import {PerfillugarPage} from '../pages/perfillugar/perfillugar';
 
 import { App } from 'ionic-angular';
 import firebase from 'firebase';
+import { AuthenticationProvider } from "../providers/authentication/authentication";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = HomePage;
+  rootPage: any = MenuPage;
 
   pages: Array<{title: string, component: any, icon: string }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public alertCtrl: AlertController, private app: App) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public alertCtrl: AlertController, private app: App, private authenticationProvider: AuthenticationProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -41,7 +42,8 @@ export class MyApp {
       { title: 'Home', component: MenuPage, icon:'home' },
       { title: 'About', component: SobrePage, icon:'ios-flower-outline' },
       { title: 'Top', component: MelhoresPage, icon: 'md-trophy'},
-      { title: 'Reported', component:DenunciadosPage, icon: 'md-megaphone' },
+      { title: 'Reported', component:DenunciadosPage, icon: 'md-megaphone' }
+      
       //{ title: 'Sair', component: SairPage },
     ];
 
@@ -56,8 +58,9 @@ export class MyApp {
     });
 
     firebase.auth().onAuthStateChanged(user => {
-      if(user){
-        this.navCtrl.setRoot(MenuPage);
+      if(!user) {
+        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.popToRoot();
       }
     });
   }
@@ -66,6 +69,10 @@ openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  logout() {
+    this.authenticationProvider.logout();
   }
 
   get navCtrl() {

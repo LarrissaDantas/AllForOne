@@ -2,37 +2,36 @@ page-home {
 
   .background{
     background-color: #151415;
-}
-
-  .logo{
-    margin-top:auto;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('../assets/logo.png');
-    background-size: 100%;
-    width: 160px;
-    height: 200px;
-  }
-  .scroll-content{
-    align-center:center;
-    display:flex;
-    flex-direction:column;
+     flex-direction:column-reverse;
     justify-content: center;
     text-align: center;
     padding-top: 20px;
+}
 
+  .logo{
+    top: 10%;
+  position:static ;
+  left: 25%;
+  right:25%;
+    background-size: 100%;
+   
 
   }
-
+  
+     
   .loginsenha{
     margin-bottom: 10px;
     height: auto;
     width: auto;
     padding-top: 5px;
+    position: static;
 
 
   }
-
+.loginemail{
+  position: static;
+  margin-top: 30%;
+}
 /*ion-card.card{
   box-shadow:15px;
   background: rgba(0, 0, 0, 0.5);

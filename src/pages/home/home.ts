@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { CadastroPage } from '../cadastro/cadastro';
 import { MenuPage }    from '../menu/menu';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
+import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -14,7 +15,7 @@ export class HomePage {
   password: string;
 
   constructor(public navCtrl: NavController,
-              public authenticationProvider: AuthenticationProvider) {
+              public authenticationProvider: AuthenticationProvider, public alertCtrl:AlertController,) {
 
   }
   cadastro(){
@@ -33,5 +34,15 @@ export class HomePage {
     });
   }
 
+  showAlert(){
+     let alert = this.alertCtrl.create({
+       title: 'This functionality is not available!',
+       buttons: ['OK']
+     });
+     alert.present();
+    }
+
 
 }
+
+
